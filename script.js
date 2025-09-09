@@ -1,7 +1,11 @@
-import { Application } from 'https://cdn.jsdelivr.net/npm/@splinetool/runtime@0.9.383/build/spline.module.js';
+import { Application } from 'https://cdn.jsdelivr.net/npm/@splinetool/runtime@1.9.42/build/spline.module.js';
+import gsap from "https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js";
+
+// создаем canvas и вставляем в контейнер
 const canvas = document.createElement('canvas');
 document.getElementById('spline-container').appendChild(canvas);
 
+// загружаем сцену Spline
 const app = new Application(canvas);
 app.load('https://prod.spline.design/605ETx3tOoOhvkow/scene.splinecode');
 
@@ -11,11 +15,8 @@ const stepAngle = (2 * Math.PI) / 5; // если 5 объектов по кру�
 window.addEventListener('wheel', (e) => {
   if (!app.scene.children[0]) return;
 
-  if (e.deltaY > 0) {
-    currentAngle -= stepAngle; // скрол вниз → вправо
-  } else {
-    currentAngle += stepAngle; // скрол вверх → влево
-  }
+  if (e.deltaY > 0) currentAngle -= stepAngle; // скрол вниз → вправо
+  else currentAngle += stepAngle;              // скрол вверх → влево
 
   const circleGroup = app.scene.children[0];
   gsap.to(circleGroup.rotation, { 
