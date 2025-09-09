@@ -15,7 +15,7 @@ body, html {
 }
 
 #content {
-  height: 200vh; /* добавляем скролл */
+  height: 200vh; /* добавляем прокрутку */
   background: #111;
   color: #fff;
   display: flex;
