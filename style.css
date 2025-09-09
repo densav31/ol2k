@@ -9,13 +9,13 @@ body, html {
 
 #spline-container {
   width: 100%;
-  height: 100vh; /* сцена на весь экран */
+  height: 100vh;
   position: sticky;
   top: 0;
 }
 
 #content {
-  height: 200vh; /* добавляем прокрутку */
+  height: 200vh;
   background: #111;
   color: #fff;
   display: flex;
