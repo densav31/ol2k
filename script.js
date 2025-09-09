@@ -1,5 +1,4 @@
 import { Application } from 'https://cdn.jsdelivr.net/npm/@splinetool/runtime@0.9.383/build/spline.module.js';
-
 const canvas = document.createElement('canvas');
 document.getElementById('spline-container').appendChild(canvas);
 
