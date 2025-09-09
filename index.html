@@ -8,21 +8,16 @@
 </head>
 <body>
 
-  <!-- Контейнер для 3D сцены Spline -->
-  <div id="spline-container">
-    <iframe 
-      src="https://my.spline.design/untitled-8PUAFswW9zj17Gszbmg0zDV8/" 
-      frameborder="0" 
-      width="100%" 
-      height="100%">
-    </iframe>
-  </div>
+  <!-- Контейнер для 3D сцены -->
+  <div id="spline-container"></div>
 
-  <!-- Контент под сценой -->
+  <!-- Контент под сценой для прокрутки -->
   <div id="content">
     <h1>Добро пожаловать!</h1>
-    <p>Прокручивайте страницу, чтобы видеть эффект.</p>
+    <p>Прокручивайте колесико мыши, чтобы сцена вращалась.</p>
   </div>
 
+  <!-- Spline Runtime + скрипт -->
+  <script type="module" src="script.js"></script>
 </body>
 </html>
